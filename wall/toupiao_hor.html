@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bingblue-互动墙</title>
+<meta http-equiv="keywords" content="" />
+<meta http-equiv="description" content="" />
+<link rel="stylesheet" type="text/css" href="dest/hudong.css">
+</head>
+
+<body>
+<div class="tphorbox">
+  <div class="header">
+    <h1>您喜欢吃什么水果您喜欢吃什么果您喜欢吃什么水什么水果您喜欢吃什么水果?</h1>
+    <div class="fl"><span>选项</span></div>
+    <div class="fr">共计<b>94</b>票</div>
+  </div>
+  <div class="body" style="height:auto;">
+    <div class="item item1">
+      <span class="item_title">选项选购想选项选购想。</span>
+      <div class="column">
+        <div class="col"></div>
+        <span class="item_score">90</span>
+      </div>
+    </div>
+    <div class="item item2">
+      <span class="item_title">选项选购想选项选购想。</span>
+      <div class="column">
+        <div class="col"></div>
+        <span class="item_score">80</span>
+      </div>
+    </div>
+    <div class="item item3">
+      <span class="item_title">选项选购想选项选购想。</span>
+      <div class="column">
+        <div class="col"></div>
+        <span class="item_score">60</span>
+      </div>
+    </div>
+    <div class="item item4">
+      <span class="item_title">选项选购想选项选购想。</span>
+      <div class="column">
+        <div class="col"></div>
+        <span class="item_score">82</span>
+      </div>
+    </div>
+    <div class="item item5">
+      <span class="item_title">选项选购想选项选购想。</span>
+      <div class="column">
+        <div class="col"></div>
+        <span class="item_score">70</span>
+      </div>
+    </div>
+    <div class="item item6">
+      <span class="item_title">选项选购想选项选购想。</span>
+      <div class="column">
+        <div class="col"></div>
+        <span class="item_score">70</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../common/jquery-1.12.4.min.js"><\/script>')</script>
+<script type="text/javascript">
+  $(function(){
+    $(".item .col").each(function() {
+       var temp = $(this).width();
+       var tempbox = $(".item1 .column").width();
+       var pre = temp/tempbox * 90;
+       $(this).css({width:0}).animate({width:pre+"%"},2000);
+    });
+  });
+</script>
+</html>

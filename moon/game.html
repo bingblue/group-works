@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bingblue-嫦娥去哪儿了</title>
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+
+<!-- 移动设备支持 -->
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+<meta content="no-cache" http-equiv="pragma">
+<meta content="0" http-equiv="expires">
+<meta content="telephone=no, address=no" name="format-detection">
+<meta name="apple-mobile-web-app-capable" content="yes"> 
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link href="../common/reset.css" rel="stylesheet" type="text/css">
+<link href="dest/zhongqiu.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../common/jquery-1.12.4.min.js"><\/script>')</script>
+</head>
+	<body>
+		<div class="box">
+			<div class="bg">
+				<img src="img/bg.png" />
+				<img src="img/bg.png" />
+			</div>
+			<div class="man">
+				<img id="man" src="img/man.png" />
+				<img id="yun" src="img/y1.png" />
+			</div>
+			<div class="score">0</div>
+		</div>
+		<audio src="img/1.mp3" autoPlay="true" loop="true" id="media"></audio>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$("body").on('touchstart',function(){
+				var media = $("#media").get(0);
+				media.play();
+			});
+		});
+		//背景图 滚动
+		var bgTime=5000;
+		$(".bg").animate({
+			top : "0",
+		},bgTime,"linear", function() {
+			$(".bg").css({
+				top : "-100%",
+			});
+		});
+		setInterval(function(){
+			$(".bg").animate({
+				top : "0",
+			},bgTime,"linear", function() {
+				$(".bg").css({
+					top : "-100%",
+				});
+			});
+		},bgTime);
+		//云 
+		var i = 1;
+	    setInterval(function(){
+	      i++;
+	      i = i>2?1:i;
+	      $("#yun").attr("src","img/y"+i+".png");
+	    },150);
+		
+		//掉落时间(毫秒)
+		var boxWidth = $(".box").width();
+		var boxHeight = $(".box").height();
+		var downTime = 500;
+		var downTime2 = 20;
+		var man = {"id":1,"width":75,"height":75,"image":"img/man.png","moveImg":"img/man2.png"};
+		var moon = {"id":2,"width":25,"height":25,"image":"img/moon.png","scoreImg":"img/J1.png","score":1};
+		var moon2 = {"id":3,"width":25,"height":25,"image":"img/moon2.png","scoreImg":"img/J5.png","score":5};
+		var moon3 = {"id":4,"width":25,"height":25,"image":"img/moon3.png","scoreImg":"img/J10.png","score":10};
+		var bomb = {"id":5,"width":60,"height":40,"image":"img/bomb.png","score":-1};
+		var bomb2 = {"id":6,"width":60,"height":40,"image":"img/bomb2.png","score":-1};
+		var kind = [moon,moon2,moon3,bomb,bomb2]
+		var probability = [80,90,95,98,101];
+		var x = 100;
+		var y = boxHeight - man.height - 60;
+		var score = 0;
+		var t;
+		var s;
+		//随机 位置
+		function randPos(num){ 
+			return Math.ceil(Math.random()*(boxWidth-num)); 
+		} 
+		//随机种类ss
+		function randKind(){ 
+			var num = Math.ceil(Math.random()*100); 
+			if(num<probability[0]){
+				return kind[0];
+			}else if(num<probability[1]){
+				return kind[1];
+			}else if(num<probability[2]){
+				return kind[2];
+			}else if(num<probability[3]){
+				return kind[3];
+			}else if(num<probability[4]){
+				return kind[4];
+			}
+		} 
+		function checkScore(left,top,kind,img,ct){
+			if(left<=(x+man.width-25)&&left>=x&&top>=y&&top<(y+man.height)){
+				if(kind.score == -1){
+					//clearInterval(t);
+					clearInterval(ct);
+					$(".score").text(0);
+					score = 0;
+					img.remove();
+					//location.reload();
+					location.href = "over.html?score="+score;
+				}else{
+					clearInterval(ct);
+					score += kind.score;
+					img.attr({
+						src: kind.scoreImg,
+					}).css({
+						left: '-=20',
+						top : "-=20",
+						width : 40,
+						height : 20,
+					});;
+					setTimeout(function(){img.remove()},500);
+					$(".score").text(score);
+				}
+			}
+		}
+		function createKing(){
+			var k = randKind();
+			var l = randPos(k.width);
+			var left = l;
+			var nowX = x;
+			var img = $("<img class='kind' width='"+k.width+"' height='"+k.height+"' />").attr({
+				src: k.image
+			}).css({
+				left: l,
+				top : -50,
+			}).appendTo($(".box"));
+			var i=-50;
+			var ct = setInterval(function(){
+				if (i<(boxHeight-k.height)) {
+					if (k.id == 6) {
+						if (left!=nowX) {
+							left = left<nowX?++left:--left;
+						}else{
+							img.attr({
+								src : bomb.image
+							});
+						}
+					}
+					img.css({
+						top: i,
+						left : left
+					});
+					checkScore(left,i,k,img,ct);
+				}else{
+					clearInterval(ct);
+					img.remove();
+				}
+				i+=2;
+			},downTime2);
+		}
+		t = setInterval(createKing,downTime);
+		setTimeout(function(){
+			downTime = 300;
+			downTime2 = 10;
+			clearInterval(t);
+			t = setInterval(createKing,downTime);
+		}, 30000);
+		setTimeout(function(){
+			probability = [60,75,83,93,101];
+		}, 15000);
+		setTimeout(function(){
+			probability = [40,60,73,90,101];
+		}, 60000);
+		setTimeout(function(){
+			probability = [30,50,55,75,101];
+		}, 75000);
+		setTimeout(function(){
+			probability = [5,25,40,75,101];
+		}, 90000);
+		var init = {l:x,t:y,sx:0,sy:0,ex:0,ey:0};
+		var obj = $(".man")[0];
+		obj.addEventListener("touchstart",function(){
+	        init.sx = event.targetTouches[0].pageX;
+	        init.sy = event.targetTouches[0].pageY;
+	        init.ex = init.sx;
+	        init.ey = init.sy;
+	        e.stopPropagation();
+    		e.preventDefault();
+	    }, false);
+	    obj.addEventListener("touchmove",function() {
+	        event.preventDefault();
+	        init.ex = event.targetTouches[0].pageX;
+	        init.ey = event.targetTouches[0].pageY;
+	        var changeX = (init.ex-init.sx) + init.l;
+	        var changeY = init.t - (init.sy-init.ey);
+	        if(changeX < 0){
+	        	changeX = 0;
+	        }
+	        if (changeX > (boxWidth-man.width)){
+	        	changeX = boxWidth-man.width;
+	        };
+	        if(changeY < 0){
+	        	changeY = 0;
+	        }
+	        if (changeY > (boxHeight-man.height)){
+	        	changeY = boxHeight-man.height;
+	        };
+	        x = changeX;
+	        y = changeY;
+	       	$(".man").css({
+	       		left: x,
+	       		top : y
+	       	});
+	       	$("#man").attr("src",man.moveImg);
+	       	e.stopPropagation();
+    		e.preventDefault();
+	    }, false);
+	    obj.addEventListener("touchend",function() {
+	    	init.l = x;
+	    	init.t = y;
+	    	$("#man").attr("src",man.image);
+	    	e.stopPropagation();
+    		e.preventDefault();
+	    }, false);
+	    document.body.addEventListener('touchmove', function(e) {
+		    e.stopPropagation();
+		    e.preventDefault();
+		});
+		function Click(){ 
+			window.event.returnValue=false; 
+		} 
+		document.oncontextmenu=Click; 
+	</script>
+</html>

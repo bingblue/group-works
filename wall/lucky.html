@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bingblue-互动墙</title>
+<meta http-equiv="keywords" content="" />
+<meta http-equiv="description" content="" />
+<link rel="stylesheet" type="text/css" href="dest/hudong.css">
+</head>
+
+<body>
+<div class="luckybox">
+  <div class="header">
+    <div class="fr">幸运星：0人</div>
+  </div>
+  <div class="body" style="height:500px;">
+
+    <div class="cont_fl">
+      <div class="pos">
+        <div class="pos_img">
+          <img src="img/user.png" class="user_img" />
+          <img src="img/king.png" class="king_img" />
+        </div>
+        <span class="user_name">用户姓名</span>
+        <div class="start_btn"><a href="#"><img src="img/start_btn.png"></a></div>
+        <div class="stop_btn"><a href="#"><img src="img/stop_btn.png"></a></div>
+      </div>
+    </div>
+
+    <div class="cont_fr">
+      <div class="user_list_title">
+        <span class="fl">序号</span>
+        <span class="fr">名单</span>
+      </div>
+      <div class="user_list">
+        <div class="iconbox">
+          <img src="img/0.png" alt="" class="icon">
+          <span>1</span>
+        </div>
+        <img src="img/user_small.png" alt="" class="user_small_img">
+        <span>用户姓名</span>
+      </div>
+      <div class="user_list bg2">
+        <div class="iconbox">
+          <img src="img/0.png" alt="" class="icon">
+          <span>20</span>
+        </div>
+        <img src="img/user_small.png" alt="" class="user_small_img">
+        <span>用户姓名</span>
+      </div>
+      <!-- <div class="user_list">
+        <img src="img/3.png" alt="" class="icon">
+        <img src="img/user_small.png" alt="" class="user_small_img">
+        <span>用户姓名</span>
+      </div>
+      <div class="user_list bg2">
+        <img src="img/4.png" alt="" class="icon">
+        <img src="img/user_small.png" alt="" class="user_small_img">
+        <span>用户姓名</span>
+      </div>
+      <div class="user_list">
+        <img src="img/5.png" alt="" class="icon">
+        <img src="img/user_small.png" alt="" class="user_small_img">
+        <span>用户姓名</span>
+      </div>
+      <div class="user_list bg2">
+        <img src="img/6.png" alt="" class="icon">
+        <img src="img/user_small.png" alt="" class="user_small_img">
+        <span>用户姓名</span>
+      </div>
+      <div class="user_list">
+        <img src="img/7.png" alt="" class="icon">
+        <img src="img/user_small.png" alt="" class="user_small_img">
+        <span>用户姓名</span>
+      </div>
+      <div class="user_list bg2">
+        <img src="img/8.png" alt="" class="icon">
+        <img src="img/user_small.png" alt="" class="user_small_img">
+        <span>用户姓名</span>
+      </div>
+      <div class="user_list">
+        <img src="img/9.png" alt="" class="icon">
+        <img src="img/user_small.png" alt="" class="user_small_img">
+        <span>用户姓名</span>
+      </div>
+      <div class="user_list bg2">
+        <img src="img/10.png" alt="" class="icon">
+        <img src="img/user_small.png" alt="" class="user_small_img">
+        <span>用户姓名</span>
+      </div> -->
+    </div>
+
+  </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../common/jquery-1.12.4.min.js"><\/script>')</script>
+<!--音乐 start-->
+<div id="audio_btn"  url="img/bg.mp3"></div>
+<style>
+#audio_btn{position: fixed;left: 10px;top: 10px;z-index: 200;width: 30px;height: 30px;background-image: url(img/wall/muisc2.png);background-repeat: no-repeat;background-position: 0px 0px;}
+#audio_btn.off{background-position: 0px -30px;}
+</style>
+<script type="text/javascript" src="dest/music.js"></script>
+<!--音乐 end-->
+<script type="text/javascript">
+  $(function(){
+    var users = [{userImg:"img/user.png",userName:"用户姓名"},{userImg:"img/user2.png",userName:"张三"},{userImg:"img/user3.png",userName:"李四"},{userImg:"img/user4.png",userName:"王五"},{userImg:"img/user5.png",userName:"XXXXX"}];
+    var html = '<div class="user_list"><img src="img/1.png" alt="" class="icon"><img src="img/user_small.png" alt="" class="user_small_img"><span>用户姓名</span></div>';
+    var i = 0;
+    var time;
+    function checkUser(){
+      if(users.length==0){
+        alert("没有用户了！");
+        return true;
+      }
+      return false;
+    }
+    $(".start_btn").click(function() {
+      if(checkUser()){
+        return;
+      }
+      $(this).hide();
+      $(".stop_btn").show();
+      time = setInterval(function(){
+        if(i >= users.length){
+          i = 0;
+        }
+        $(".user_img").attr("src",users[i].userImg);
+        $(".user_name").text(users[i].userName);
+        i++;
+      },100);
+    });
+    $(".stop_btn").click(function() {
+      $(this).hide();
+      $(".start_btn").show();
+      clearInterval(time);
+      var id = i;
+      var newHtml = $(html);
+      var lists = $(".cont_fr .user_list");
+      if(lists.length%2 != 0){
+        newHtml.addClass('bg2');
+      }
+      newHtml.find('.icon').attr("src","img/"+(lists.length+1)+".png");
+      newHtml.find('.user_small_img').attr("src",users[i-1].userImg);
+      newHtml.find('span').text(users[i-1].userName);
+      $(".cont_fr").append(newHtml);
+      users.splice(i-1, 1);
+      $(".header .fr").text("幸运星："+ (lists.length+1) +"人");
+      i = 0;
+    });
+  });
+</script>
+</body>
+</html>

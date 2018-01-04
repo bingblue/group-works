@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bingblue-互动墙</title>
+<meta http-equiv="keywords" content="" />
+<meta http-equiv="description" content="" />
+<link rel="stylesheet" type="text/css" href="dest/hudong.css">
+</head>
+<body>
+<div class="groupbox">
+  <div class="header">
+    <div class="body" style="">
+      <div class="user_item">
+          <img src="img/user_small.png" alt="" class="user_img">
+          <span class="user_name">用户姓名</span>
+      </div>
+      <div class="user_item">
+          <img src="img/user_small.png" alt="" class="user_img">
+          <span class="user_name">用户姓名</span>
+      </div>
+      <div class="user_item">
+          <img src="img/user_small.png" alt="" class="user_img">
+          <span class="user_name">用户姓名</span>
+      </div>
+      <div class="user_item">
+          <img src="img/user_small.png" alt="" class="user_img">
+          <span class="user_name">用户姓名</span>
+      </div>
+      <div class="user_item">
+          <img src="img/user_small.png" alt="" class="user_img">
+          <span class="user_name">用户姓名</span>
+      </div>
+      <div class="user_item">
+          <img src="img/user_small.png" alt="" class="user_img">
+          <span class="user_name">用户姓名</span>
+      </div>
+      <div class="user_item">
+          <img src="img/user_small.png" alt="" class="user_img">
+          <span class="user_name">用户姓名</span>
+      </div>
+      <div class="user_item">
+          <img src="img/user_small.png" alt="" class="user_img">
+          <span class="user_name">用户姓名</span>
+      </div>
+      <div class="user_item">
+          <img src="img/user_small.png" alt="" class="user_img">
+          <span class="user_name">用户姓名</span>
+      </div>
+      <div class="user_item">
+          <img src="img/user_small.png" alt="" class="user_img">
+          <span class="user_name">用户姓名</span>
+      </div>
+      
+      <a href="javascript:void(0);" class="start_btn"><img src="img/start_group.png" /></a>
+      <a href="javascript:void(0);" class="stop_btn" style="display:none;"><img src="img/stop_group.png" /></a>
+    </div>
+  </div>
+  <ul class="team_list">
+    <!-- <li class="list1">
+      <span class="num">第1组</span>
+      <div class="user_item"><img src="img/user_small.png" alt=""><span>用户姓名</span></div>
+      <div class="user_item"><img src="img/user_small.png" alt=""><span>用户姓名</span></div>
+      <div class="user_item"><img src="img/user_small.png" alt=""><span>用户姓名</span></div>
+      <div class="user_item"><img src="img/user_small.png" alt=""><span>用户姓名</span></div>
+      <div class="user_item"><img src="img/user_small.png" alt=""><span>用户姓名</span></div>
+      <div class="user_item"><img src="img/user_small.png" alt=""><span>用户姓名</span></div>
+    </li>
+    <li class="list2 bg2" style="display:none;">
+      <span class="num">第2组</span>
+      <div class="user_item"><img src="img/user_small.png" alt=""><span>用户姓名</span></div>
+      <div class="user_item"><img src="img/user_small.png" alt=""><span>用户姓名</span></div>
+      <div class="user_item"><img src="img/user_small.png" alt=""><span>用户姓名</span></div>
+      <div class="user_item"><img src="img/user_small.png" alt=""><span>用户姓名</span></div>
+      <div class="user_item"><img src="img/user_small.png" alt=""><span>用户姓名</span></div>
+      <div class="user_item"><img src="img/user_small.png" alt=""><span>用户姓名</span></div>
+    </li> -->
+  </ul>
+  <div class="cen">
+  <ul class="step">
+    <li id="c1" onclick="goto(1);" class="now"><a href="javascript:void(0);">1</a></li>
+    <li id="c2" onclick="goto(2);"><a href="javascript:void(0);">2</a></li>
+    <li id="c3" onclick="goto(3);"><a href="javascript:void(0);">3</a></li>
+    <li id="c4" onclick="goto(4);"><a href="javascript:void(0);">4</a></li>
+    <li id="c5" onclick="goto(5);"><a href="javascript:void(0);">5</a></li>
+    <li id="c6" onclick="goto(6);"><a href="javascript:void(0);">6</a></li>
+    <li id="c7" onclick="goto(7);"><a href="javascript:void(0);">7</a></li>
+    <li id="c8" onclick="goto(8);"><a href="javascript:void(0);">8</a></li>
+    <li id="c9" onclick="goto(9);"><a href="javascript:void(0);">9</a></li>
+    <li id="c10" onclick="goto(10);"><a href="javascript:void(0);">10</a></li>
+    <li id="call" onclick="goto('all');"><a href="javascript:void(0);">显示全部</a></li>
+  </ul>
+  </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../common/jquery-1.12.4.min.js"><\/script>')</script>
+<!--音乐 start-->
+<div id="audio_btn"  url="img/bg.mp3"></div>
+<style>
+#audio_btn{position: fixed;left: 10px;top: 10px;z-index: 200;width: 30px;height: 30px;background-image: url(img/wall/muisc2.png);background-repeat: no-repeat;background-position: 0px 0px;}
+#audio_btn.off{background-position: 0px -30px;}
+</style>
+<script type="text/javascript" src="dest/music.js"></script>
+<!--音乐 end-->
+<script type="text/javascript">
+
+  //下一页
+  function goto(id){
+    $(".step li").removeClass('now');
+    if (id == "all") {
+      $(".header").hide();
+      $(".team_list li").show();
+      $("#call").addClass('now')
+    }else{
+      $(".header").show();
+      $(".team_list li").hide();
+      $(".team_list .list" + id).show();
+      $("#c" + id).addClass('now')
+    }
+  }
+  $(function(){
+    var users = [{userImg:"img/user.png",userName:"用户姓名"},{userImg:"img/user2.png",userName:"张三"},{userImg:"img/user3.png",userName:"李四"},{userImg:"img/user4.png",userName:"王五"},{userImg:"img/user5.png",userName:"XXXXX"},{userImg:"img/user.png",userName:"用户姓名"},{userImg:"img/user2.png",userName:"张三"},{userImg:"img/user3.png",userName:"李四"},{userImg:"img/user4.png",userName:"王五"},{userImg:"img/user5.png",userName:"XXXXX"},{userImg:"img/user.png",userName:"用户姓名"},{userImg:"img/user2.png",userName:"张三"},{userImg:"img/user3.png",userName:"李四"},{userImg:"img/user4.png",userName:"王五"},{userImg:"img/user5.png",userName:"XXXXX"}];
+    var html = '<li><span class="num">第1组</span></li>';
+    var i = 0;
+    var time = {};
+    var isFirst = true;
+    function checkUser(){
+      if(users.length==0){
+        alert("没有用户了！");
+        return true;
+      }
+      return false;
+    }
+    $(".start_btn").click(function() {
+      if(checkUser()){
+        return;
+      }
+      $(this).hide();
+      $(".stop_btn").show();
+      $(".body .user_item").each(function(index){
+        var $this = $(this);
+        $this.i = index;
+        time["t" + index] = setInterval(function(){
+          if($this.i >= users.length){
+            $this.i = 0;
+          }
+          $this.find(".user_img").attr("src",users[$this.i].userImg);
+          $this.find(".user_name").text(users[$this.i].userName);
+          $this.i++;
+        },100);
+      });
+    });
+    $(".stop_btn").click(function() {
+      $(this).hide();
+      $(".start_btn").show();
+      for(var i=0;i<$(".body .user_item").length;i++){
+        clearInterval(time["t" + i]);
+      }
+      //请求服务器，得到 更新后的 users 和 checkUser
+      users = users;
+      var checkUser = [{userImg:"img/user.png",userName:"用户姓名"},{userImg:"img/user2.png",userName:"张三1"},{userImg:"img/user3.png",userName:"李四2"},{userImg:"img/user3.png",userName:"李四2"},{userImg:"img/user3.png",userName:"李四2"},{userImg:"img/user3.png",userName:"李四2"},{userImg:"img/user3.png",userName:"李四2"},{userImg:"img/user3.png",userName:"李四2"},{userImg:"img/user3.png",userName:"李四2"},{userImg:"img/user3.png",userName:"李四2"}];
+      var checkUser2 = [{userImg:"img/user.png",userName:"用户姓0"},{userImg:"img/user2.png",userName:"张三1"},{userImg:"img/user3.png",userName:"李四2"}];
+      $(".body .user_item").each(function(index){
+        $(this).find('.user_img').attr({
+          src: checkUser[index].userImg
+        });
+        $(this).find('.user_name').text(checkUser[index].userName);
+      });
+      var newHtml = $(html);
+      var lists = $(".team_list li");
+      if(lists.length%2 != 0){
+        newHtml.addClass('bg2');
+      }
+      newHtml.find('.num').text("第"+(lists.length+1)+"组");
+      newHtml.addClass("list"+(lists.length+1));
+      $(".body .user_item").clone().appendTo(newHtml);
+      $(".team_list").append(newHtml);
+      goto(lists.length+1);
+    });
+
+
+  });
+</script>
+</body>
+</html>

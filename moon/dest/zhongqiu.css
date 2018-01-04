@@ -1,0 +1,30 @@
+﻿/* 开始页面 */
+.main{position: relative;max-width: 640px;min-width:320px;margin: 0 auto;height: 100%;min-height: 440px;}
+.pos{position: absolute;width: 100%;height: 100%;top:0;text-align: center;}
+.startBtn{width: 100%;position: absolute;bottom: 5%;}
+.startBtn img{width: 150px;height: 59px;}
+.startTxt{position: absolute;bottom:35%;left: 6%;text-align: left;}
+.startTxt span{display:block;font-size: 23px;color: white;/*text-shadow:2px 2px 0 black,-2px -2px 0 black;*/font-weight: 800;text-align: center;}
+.startFooter{font-size: 15px;color: white;position: absolute;bottom: 5px;width: 100%;}
+
+/* 结束页面 */
+img.background{height: 100%;width: 100%;}
+.overTxt{width:100%;position: absolute;top: 7%;}
+.overTxt span{display:block;font-size:24px;color: white;/*text-shadow:2px 2px 0 black,-2px -2px 0 black;*/font-weight: 800;margin-bottom: 3%;}
+.overTxt .fTxt,.overTxt b{padding-left:5%;color: #fede64;/*text-shadow:1px 1px 5px white,-1px -1px 5px white;*/}
+.overTxt b{padding:0 2%;color: #48b690;}
+.overBtn{width: 100%;height: 10%;position: absolute;bottom: 6%;}
+.overBtn a{display: block;width: 43%;height:100%;float: left;margin-left: 28%;}
+.mask{position: absolute;top: 0;left: 0;background: #000;opacity: 0.8;width: 100%;height: 100%;}
+.mask img{float:right;margin-top: 10px;margin-right: 20px;}
+.mask h1{font-size: 24px;text-align: center;color: #fff;margin-top: 10px;width: 100%;clear: both;}
+
+/* 游戏页面 */
+body{max-width:640px;margin:0 auto}
+.box{position: relative;width: 100%;height: 100%;overflow: hidden;margin: 0 auto;}
+.man{width: 75px;height: 75px;position: absolute;bottom: 2px;z-index: 5;left: 100px;bottom:60px;}
+.man img{position: relative;width: 75px;height: 75px;z-index: 5;margin: 0;border: 0;}
+#yun{height: 47px;top: -8px;z-index: 4;}
+.kind{position: absolute;z-index: 2;}
+.score{position: absolute;top: 5px;left: 8px;z-index: 2;font-size: 24px;color: #fff;padding: 5px 8px;border-radius: 5px;background: #6652ab;}
+.bg{position: absolute;top: -100%;}

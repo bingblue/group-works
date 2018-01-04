@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bingblue-大转盘</title>
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+
+<!-- 移动设备支持 -->
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+<meta content="no-cache" http-equiv="pragma">
+<meta content="0" http-equiv="expires">
+<meta content="telephone=no, address=no" name="format-detection">
+<meta name="apple-mobile-web-app-capable" content="yes"> 
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link href="../common/reset.css" rel="stylesheet" type="text/css">
+<link href="dest/zp.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="wrap p3">
+  <div class="main">
+    <img id="zp" src="img/man_zp.png">
+    <img src="img/p3.jpg">
+    <img id="jt" class="jq-start" src="img/man_jt.png">
+    <img id="times" src="img/times.png">
+    <img id="times-num" src="img/3.png">
+    <a href="mygift.html" class="my-gift"></a>
+  </div>
+
+  <div class="pos pos1">
+    <img src="img/pos1.jpg">
+    <a class="my-gift" href="mygift.html"></a>
+    <a class="my-ok" href="javascript:;"></a>
+    <a class="my-back hide" href="javascript:;"></a>
+  </div>
+  <div class="pos pos1-2">
+    <img src="img/pos1-2.jpg">
+    <form action="">
+      <input class="ipt ipt1" type="text" holderplace="">
+      <input class="ipt ipt2" type="text" holderplace="">
+      <textarea class="ipt ipt3" type="text" holderplace=""></textarea>
+      <!-- <input type="submit" class="my-ok" value=""> -->
+    </form>
+    <a class="my-gift" href="mygift.html"></a>
+    <a class="my-ok" href="javascript:;"></a>
+    <a class="my-back hide" href="javascript:;"></a>
+  </div>
+  <div class="pos pos1-3">
+    <img src="img/pos1-3.jpg">
+    <a class="my-continue" href="index.html"></a>
+    <a class="my-share jq-share" href="javascript:;"></a>
+    <a class="my-gift" href="mygift.html"></a>
+    <a class="my-back hide" href="javascript:;"></a>
+  </div>
+
+
+  <div class="pos pos2">
+    <img src="img/pos2.jpg">
+    <a class="my-gift" href="mygift.html"></a>
+    <a class="my-ok" href="javascript:;"></a>
+    <a class="my-back hide" href="javascript:;"></a>
+  </div>
+  <div class="pos pos2-1">
+    <img src="img/pos2-1.jpg">
+    <p class="my-txt">24776943</p>
+    <a class="my-continue" href="index.html"></a>
+    <a class="my-share jq-share" href="javascript:;"></a>
+    <a class="my-gift" href="mygift.html"></a>
+    <a class="my-back hide" href="javascript:;"></a>
+  </div>
+  <div class="pos pos3">
+    <img src="img/pos3.jpg">
+    <a class="my-gift" href="mygift.html"></a>
+    <a class="my-ok" href="index.html"></a>
+    <a class="my-back hide" href="javascript:;"></a>
+  </div>
+  <div class="pos pos-no">
+    <img src="img/pos4.jpg">
+    <a class="my-gift" href="mygift.html"></a>
+    <a class="my-ok jq-share" href="javascript:;"></a>
+    <a class="my-back hide" href="javascript:;"></a>
+  </div>
+  <div class="pos pos-share">
+    <img src="img/share.jpg">
+    <a class="my-back hide" href="javascript:;"></a>
+  </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../common/jquery-1.12.4.min.js"><\/script>')</script>
+<script type="text/javascript">
+  $(function(){
+    $(".hide").click(function(){
+      $(".pos").hide();
+    });
+    $(".jq-share").click(function(){
+      $(".pos").hide();
+      $(".pos-share").show();
+    });
+
+    $(".pos1 .my-ok").click(function(){
+      $(".pos").hide();
+      $(".pos1-2").show();
+    });
+    $(".pos2 .my-ok").click(function(){
+      $(".pos").hide();
+      $(".pos2-1").show();
+    });
+    $(".pos1-2 .my-ok").click(function(){
+      $(".pos").hide();
+      $(".pos1-3").show();
+    });
+    /* 开始游戏 */
+    $(".jq-start").click(function() {
+      var i = 1;
+      var t = setInterval(function(){
+        i+=5;
+        if(i>360){i=0;}
+        $("#zp").css({
+          "-webkit-transform" : "rotateZ("+ i +"deg)"
+        });
+      },10);
+
+      setTimeout(function(){
+        //谢谢：143deg;一等奖：72deg;二等奖：2deg;
+        clearInterval(t);
+        $("#zp").css({
+          "-webkit-transform" : "rotateZ("+ 143 +"deg)"
+        });
+        setTimeout(function(){
+          $(".pos1").show();
+        }, 1000);
+      }, 2000);
+    });
+
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bingblue-互动墙</title>
+<meta http-equiv="keywords" content="" />
+<meta http-equiv="description" content="" />
+<link rel="stylesheet" type="text/css" href="dest/hudong.css">
+</head>
+
+<body>
+<div class="homebox">
+	<div class="welcome">
+    	<span class="welcome_span">欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词欢迎词</span>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../common/jquery-1.12.4.min.js"><\/script>')</script>
+<script type="text/javascript">
+	$(function(){
+		var boxH = $(".welcome").height();
+		var spanH = $(".welcome_span").height();
+		if(boxH < spanH){
+			var diffH = (boxH - spanH);
+			$(".welcome_span").animate({
+				marginTop : diffH
+			},10000);
+		}else{
+			var diffH = (boxH - spanH)/2;
+			$(".welcome_span").css({
+				marginTop : diffH
+			});
+		}
+	});
+</script>
+</body>
+</html>

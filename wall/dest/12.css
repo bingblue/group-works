@@ -1,0 +1,15 @@
+/* 设置滚动条的样式 */
+::-webkit-scrollbar { width: 12px;}
+/* 滚动槽 */
+::-webkit-scrollbar-track {background:#f0f0f0;}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {background:#cdcdcd;}
+::-webkit-scrollbar-thumb:window-inactive { background:#f0f0f0;}
+
+#whd_tab{width:90%;margin:0 auto;margin-top:10px;}
+#whd_tab td{padding-top: 0px;padding-bottom: 4px;vertical-align: top;}
+#whd_tab .tab_l{width:60px;}
+.user_name{height:16px;line-height:16px;font-size:13px;color:#333;font-weight:400;text-indent:0px;}
+.user_text{display:inline-block; padding:4px; max-width:100%; white-space:normal;word-wrap:break-word;word-break:break-all; border:1px solid #f6ffd2; background-color:#FD9923;-moz-border-radius:7px;-webkit-border-radius:7px;-o-border-radius:7px; -ms-border-radius:7px; border-radius:7px;color:#FFF;font-size:12px;font-weight:400;}
+.tab_l img{width: 45px;height: 45px;}
+.user_name2{line-height:16px;height: 16px;margin-top: -2px;}

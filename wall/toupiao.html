@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bingblue-互动墙</title>
+<meta http-equiv="keywords" content="" />
+<meta http-equiv="description" content="" />
+<link rel="stylesheet" type="text/css" href="dest/hudong.css">
+</head>
+
+<body>
+<div class="tpbox">
+  <div class="header">
+    <div class="fl"><span>您喜欢吃什么水果</span></div>
+    <div class="fr">共计<b>94</b>票</div>
+  </div>
+  <div class="body" style="height:500px;">
+
+    <div class="item item1">
+      <span class="item_title">80票</span>
+      <div class="column">
+        <div class="col"></div>
+      </div>
+      <span class="item_footer">A项</span>
+    </div>
+    <div class="item item2">
+      <span class="item_title">40票</span>
+      <div class="column">
+        <div class="col"></div>
+      </div>
+      <span class="item_footer">B项</span>
+    </div>
+    <div class="item item3">
+      <span class="item_title">60票</span>
+      <div class="column">
+        <div class="col"></div>
+      </div>
+      <span class="item_footer">C项</span>
+    </div>
+    <div class="item item4">
+      <span class="item_title">500票</span>
+      <div class="column">
+        <div class="col"></div>
+      </div>
+      <span class="item_footer">D项</span>
+    </div>
+    <div class="item item5">
+      <span class="item_title">70票</span>
+      <div class="column">
+        <div class="col"></div>
+      </div>
+      <span class="item_footer">E项</span>
+    </div><!-- 
+    <div class="item item5">
+      <span class="item_title">70票</span>
+      <div class="column">
+        <div class="col"></div>
+      </div>
+      <span class="item_footer">E项</span>
+    </div>
+    <div class="item item5">
+      <span class="item_title">70票</span>
+      <div class="column">
+        <div class="col"></div>
+      </div>
+      <span class="item_footer">E项</span>
+    </div>
+    <div class="item item5">
+      <span class="item_title">70票</span>
+      <div class="column">
+        <div class="col"></div>
+      </div>
+      <span class="item_footer">E项</span>
+    </div> -->
+
+  </div>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../common/jquery-1.12.4.min.js"><\/script>')</script>
+<script type="text/javascript">
+  $(function(){
+    $(".item .col").each(function() {
+       var temp = $(this).height();
+       $(this).css({height:0}).animate({height:temp},2000);
+    });
+  });
+</script>
+</html>
