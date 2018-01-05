@@ -6,34 +6,100 @@
   <meta http-equiv="keywords" content="" />
   <meta http-equiv="description" content="" />
   <style>
-    h1 {
+    img {
+      height: 100%;
+      max-height: 100%;
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+    header,.search {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header img {
+      height: 50px;
+    }
+    section {
       text-align: center;
-      margin-top: 20px;
+    }
+    h1 {
+      display: inline-block;
+      width: auto;
+      padding: 5px;
+      color: #666;
+      text-align: center;
+      margin: 40px auto;
+      border-bottom: 1px solid #0099ff;
+    }
+    h2 {
+      color: #97bed9;
+      text-align: center;
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 1.8;
+      font-weight: 400;
+    }
+    .search {
+      margin-top: 50px;
+    }
+    .search ul {
+      list-style: none;
+    }
+    .search li {
+      float: left;
+      padding: 0px 15px;
+      border-right: 1px solid #ccc;
+    }
+    .search li:last-child {
+      border-right: none;
+    }
+    .search li a:hover,
+    .search li.active a {
+      color: #0099ff;
+    }
+    .search .go {
+      float: right;
+    }
+    .search .go input{
+      display: inline-block;
+      height: 24px;
+      padding: 3px 5px;
+      border: 0;
+      border-bottom: 1px solid #0099ff;
+      outline:none;
+    }
+    .search .go a{
+      display: inline-block;
+      height: 26px;
+      line-height: 26px;
+      padding: 3px 15px;
+      color: #fff;
+      background: #0099ff;
     }
 
-    ul {
+    ul.works {
       list-style: none;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      width: 800px;
+      max-width: 1200px;
       margin: 0 auto;
+      width: 100%;
     }
 
-    li {
+    ul.works li {
       list-style: none;
       width: 150px;
       height: 120px;
       text-align: center;
       padding: 40px 0;
     }
-
-    a {
-      text-decoration: none;
-      color: #333;
+    ul.works .pos {
+      display: none;
     }
-
-    span {
+    ul.works span {
       display: block;
     }
   </style>
@@ -45,35 +111,74 @@
   <script>window.jQuery || document.write('<script src="../common/jquery-1.12.4.min.js"><\/script>')</script>
 
   <div>
-    <h1>作品集</h1>
+    <header>
+      <img src="http://bingblue.qiniudn.com/company/img/logo.png" alt="bingblue logo">
+    </header>
+    <section>
+      <h1>项目·案例</h1>
+      <h2>冰蓝科技冰蓝科技冰蓝科技冰蓝科技冰<br>蓝科技冰蓝科技冰蓝科技冰蓝科技冰蓝科技冰蓝科技冰蓝科技冰蓝科技冰蓝科技冰蓝科技</h2>
+    </section>
+    <div class="search">
+      <ul>
+        <li class="active"><a href="javascript:;">所有</a></li>
+        <li><a href="javascript:;">网站</a></li>
+        <li><a href="javascript:;">小游戏</a></li>
+        <li><a href="javascript:;">微信</a></li>
+        <li><a href="javascript:;">APP</a></li>
+      </ul>
+      <div class="go">
+        <input type="text" placeholder="请输入想要查询的标签">
+        <a href="javascript:;">搜索</a>
+      </div>
+    </div>
     <ul class="works">
+      <li>
+        <a target="_blank" href="#">
+          <img src="common/item1.png">
+          <div class="tag"><span>PC</span><span>网站</span></div>
+          <span>博润企业官网</span>
+        </a>
+        <div class="pos">
+          <img src="common/er.png" alt="二维码">
+        </div>
+      </li>
+      <li>
+        <a target="_blank" href="#">
+          <img src="common/item1.png">
+          <div class="tag"><span>PC</span><span>网站</span></div>
+          <span>博润企业官网</span>
+        </a>
+        <div class="pos">
+          <img src="common/er.png" alt="二维码">
+        </div>
+      </li>
     </ul>
   </div>
 
 </body>
 <script>
   $(function(){
-    $.ajax({
-      url: './data.json',
-      type: 'GET',
-      async: false,//使用同步的方式,true为异步方式
-      dataType: "json",
-      success: function (data) {
-        let works = data.data;
-        for(let i in works){
-          let newHtml = `<li>
-                            <a target="_blank" href="${works[i].url}">
-                              <img src="${works[i].img}">
-                              <span>${works[i].title}</span>
-                            </a>
-                          </li>`
-          $(newHtml).appendTo($('.works'))
-        }
-      },
-      error: function () {
-        window.location.reload(true);
-      }
-    });
+    // $.ajax({
+    //   url: './data.json',
+    //   type: 'GET',
+    //   async: false,
+    //   dataType: "json",
+    //   success: function (data) {
+    //     let works = data.data;
+    //     for(let i in works){
+    //       let newHtml = `<li>
+    //                         <a target="_blank" href="${works[i].url}">
+    //                           <img src="${works[i].img}">
+    //                           <span>${works[i].title}</span>
+    //                         </a>
+    //                       </li>`
+    //       $(newHtml).appendTo($('.works'))
+    //     }
+    //   },
+    //   error: function () {
+    //     window.location.reload(true);
+    //   }
+    // });
   })
 </script>
 </html>
