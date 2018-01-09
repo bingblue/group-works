@@ -6,7 +6,7 @@
     "intro":"人气推广小游戏，适合抽奖类活动。",
     "url":"https://bingblue.com/works/egg",
     "img": "common/index/item1.png",
-    "tag":"EGG,H5,小游戏,微信，抽奖"
+    "tag":"EGG,H5,小游戏,微信,抽奖"
   },{
     "id": 2,
     "name": "fere",
@@ -62,7 +62,7 @@
     "intro": "vjoy人力资源企业官网",
     "url": "http://www.gongziqianbao.com/humanWebsite",
     "img": "common/index/item8.png",
-    "tag": "VJOY,PC,官网"
+    "tag": "VJOY,PC,网站"
   },{
     "id": 9,
     "name": "wall",
@@ -79,6 +79,6 @@
     "intro": "上海润博电子系统设备股份有限公司-公司官网",
     "url": "http://www.shanghai-rambo.com.cn/",
     "img": "common/index/item10.png",
-    "tag": "RAMBO,PC,官网"
+    "tag": "RAMBO,PC,网站"
   }]
 }
