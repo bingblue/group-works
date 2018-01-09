@@ -3,74 +3,74 @@
     "id":1,
     "name":"egg",
     "title":"砸金蛋",
-    "intro":"砸金蛋小游戏",
+    "intro":"人气推广小游戏，适合抽奖类活动。",
     "url":"https://bingblue.com/works/egg",
-    "img": "wall/img/index/icon_11.png",
-    "tag":"H5,小游戏,微信"
+    "img": "common/index/item1.png",
+    "tag":"EGG,H5,小游戏,微信，抽奖"
   },{
     "id": 2,
     "name": "fere",
     "title": "FERE",
-    "intro": "FERE网站",
+    "intro": "移动官网，使用H5技术开发，兼容IOS、Android等手机。",
     "url": "https://bingblue.com/works/fere",
-    "img": "wall/img/index/icon_11.png",
-    "tag": "H5,网站"
+    "img": "common/index/item1.png",
+    "tag": "FERE,H5,网站,APP"
   },{
     "id": 3,
     "name": "fish",
-    "title": "钓鱼小游戏",
-    "intro": "钓鱼小游戏",
+    "title": "钓鱼",
+    "intro": "趣味小游戏,使用鱼钩来获得更高分数吧~",
     "url": "https://bingblue.com/works/fish",
-    "img": "wall/img/index/icon_11.png",
-    "tag": "H5,小游戏,微信"
+    "img": "common/index/item1.png",
+    "tag": "FISH,H5,小游戏,微信"
   },{
     "id": 4,
     "name": "lottery",
-    "title": "抽奖",
-    "intro": "韩范来袭大转盘抽奖",
+    "title": "大转盘",
+    "intro": "韩范来袭大转盘抽奖活动推广",
     "url": "https://bingblue.com/works/lottery",
-    "img": "wall/img/index/icon_11.png",
-    "tag": "H5,小游戏,微信"
+    "img": "common/index/item1.png",
+    "tag": "LOTTERY,H5,小游戏,微信,抽奖"
   },{
     "id": 5,
     "name": "moon",
     "title": "嫦娥去哪儿了",
-    "intro": "嫦娥吃月饼，不要被猪八戒抓到哦",
+    "intro": "类似飞机大战，嫦娥吃月饼，不要被猪八戒抓到哦",
     "url": "https://bingblue.com/works/moon",
-    "img": "wall/img/index/icon_11.png",
-    "tag": "H5,小游戏,微信"
+    "img": "common/index/item1.png",
+    "tag": "MOON,H5,小游戏,微信"
   },{
     "id": 6,
     "name": "newyear",
     "title": "明星拜年",
-    "intro": "腾讯明星拜年-张亮，范冰冰",
+    "intro": "腾讯过年项目-明星拜年-张亮，范冰冰等你哦",
     "url": "https://bingblue.com/works/newyear",
-    "img": "wall/img/index/icon_11.png",
-    "tag": "H5,推广,微信"
+    "img": "common/index/item1.png",
+    "tag": "NEWYEAR,H5,微信,营销"
   },{
     "id": 7,
     "name": "vipjr",
     "title": "vip小游戏",
-    "intro": "vipjr推广小游戏",
+    "intro": "vipjr推广活动,内含三款小游戏，纸牌抽奖哦",
     "url": "https://bingblue.com/works/vipjr",
-    "img": "wall/img/index/icon_11.png",
-    "tag": "H5,小游戏,微信"
+    "img": "common/index/item1.png",
+    "tag": "VIPJR,H5,小游戏,微信,抽奖"
   },{
     "id": 8,
     "name": "vjoy",
     "title": "vjoy官网",
-    "intro": "vjoy企业官网",
+    "intro": "vjoy人力资源企业官网",
     "url": "https://bingblue.com/works/vjoy",
-    "img": "wall/img/index/icon_11.png",
-    "tag": "PC,官网"
+    "img": "common/index/item1.png",
+    "tag": "VJOY,PC,官网"
   },{
     "id": 9,
     "name": "wall",
     "title": "互动墙",
-    "intro": "有各种各样的互动方式",
+    "intro": "年会、大型活动适用,内含各种各样的互动方式,如签到,留言等",
     "url": "https://bingblue.com/works/wall",
-    "img": "wall/img/index/icon_11.png",
-    "tag": "H5,小游戏,微信"
+    "img": "common/index/item1.png",
+    "tag": "WALL,PC,小游戏,微信,抽奖"
   },
   {
     "id": 10,
@@ -78,7 +78,7 @@
     "title": "润博电子官网",
     "intro": "上海润博电子系统设备股份有限公司-公司官网",
     "url": "http://www.shanghai-rambo.com.cn/",
-    "img": "wall/img/index/icon_11.png",
-    "tag": "PC,官网"
+    "img": "common/index/item1.png",
+    "tag": "RAMBO,PC,官网"
   }]
 }

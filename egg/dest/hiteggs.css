@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * { margin: 0; outline: 0; padding: 0; font-size: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 a { text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0.35); }
@@ -15,8 +16,6 @@ h1,h2,h3,h4,h5,h6 {margin:0; padding:0; font-weight:normal;}
 html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 { -webkit-text-size-adjust: none;}
 
 
-
-@charset "UTF-8";
 .btn-start, .mask-rule .btn-back, .btn-myprice, .btn-rule, .mask-msg .btn-invite, .mask-msg .btn-back, .mask-msg-no .btn-invite, .mask-msg-no .btn-again, .mask-msg-yes .btn-invite, .mask-msg-yes .btn-again, .mask-msg-bd .btn-invite, .mask-msg-bd .btn-again, .mask-msg-bd .btn-ok, .mask-msg-info .btn-invite, .mask-msg-info .btn-again, .mask-msg-code .btn-invite, .mask-msg-code .btn-again, .mask-prize .btn-invite, .mask-prize .btn-again, .mask-msg-picprize .btn-invite, .mask-msg-picprize .btn-again, .mask-msg-info .btn-cancel, .mask-msg-info .btn-ok, .mask-msg-code .btn-ok, .mask-msg-picprize .btn-ok, .mask-prize .btn-ok, .btn-over-back {
   position: absolute;
   top: 0;
