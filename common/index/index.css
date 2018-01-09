@@ -173,6 +173,7 @@ ul.works .tag span:hover {
 ul.works h3 {
   color: #333;
   margin-top: 10px;
+  margin-left: 3px;
   font-size: 18px;
   font-weight: 400;
   text-align: left;
