@@ -27,6 +27,7 @@ header,
   text-align: left;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 header img {
@@ -56,6 +57,7 @@ h2 {
   letter-spacing: 1px;
   line-height: 1.8;
   font-weight: 400;
+  padding: 0 20px;
 }
 
 .search {
@@ -87,12 +89,14 @@ h2 {
 }
 
 .search .go input {
+  -webkit-appearance: none;
+  outline:none;
   display: inline-block;
   height: 24px;
   padding: 3px 5px;
   border: 0;
+  border-radius: 0;
   border-bottom: 1px solid #0099ff;
-  outline: none;
 }
 
 .search .go a {
@@ -198,4 +202,14 @@ footer {
 
 footer p {
   font-size: 12px;
+}
+
+@media screen and (max-width: 640px) {
+  .search .go {
+    display: none;
+  }
+  ul.works li {
+    width: 90%;
+    padding: 20px 5%;
+  }
 }
