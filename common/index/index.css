@@ -149,6 +149,7 @@ ul.works .pos img {
 ul.works img {
   width: 100%;
   max-width: 100%;
+  border: 1px solid #eee;
 }
 
 ul.works a img:hover {
