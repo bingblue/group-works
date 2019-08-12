@@ -5,7 +5,7 @@
     "title":"砸金蛋",
     "intro":"人气推广小游戏，适合抽奖类活动。",
     "url":"https://bingblue.com/works/egg",
-    "img": "http://bingblue.qiniudn.com/common/index/item1.png",
+    "img": "https://bingblue.oss-cn-hangzhou.aliyuncs.com/common/index/item1.png",
     "tag":"EGG,H5,小游戏,微信,抽奖"
   },{
     "id": 2,
@@ -13,7 +13,7 @@
     "title": "FERE",
     "intro": "移动官网，使用H5技术开发，兼容IOS、Android等手机。",
     "url": "https://bingblue.com/works/fere",
-    "img": "http://bingblue.qiniudn.com/common/index/item2.jpg",
+    "img": "https://bingblue.oss-cn-hangzhou.aliyuncs.com/common/index/item2.jpg",
     "tag": "FERE,H5,网站,APP"
   },{
     "id": 3,
@@ -21,7 +21,7 @@
     "title": "钓鱼",
     "intro": "趣味小游戏,使用鱼钩来获得更高分数吧~",
     "url": "https://bingblue.com/works/fish",
-    "img": "http://bingblue.qiniudn.com/common/index/item3.png",
+    "img": "https://bingblue.oss-cn-hangzhou.aliyuncs.com/common/index/item3.png",
     "tag": "FISH,H5,小游戏,微信"
   },{
     "id": 4,
@@ -29,7 +29,7 @@
     "title": "大转盘",
     "intro": "韩范来袭大转盘抽奖活动推广",
     "url": "https://bingblue.com/works/lottery",
-    "img": "http://bingblue.qiniudn.com/common/index/item4.png",
+    "img": "https://bingblue.oss-cn-hangzhou.aliyuncs.com/common/index/item4.png",
     "tag": "LOTTERY,H5,小游戏,微信,抽奖"
   },{
     "id": 5,
@@ -37,7 +37,7 @@
     "title": "嫦娥去哪儿了",
     "intro": "类似飞机大战，嫦娥吃月饼，不要被猪八戒抓到哦",
     "url": "https://bingblue.com/works/moon",
-    "img": "http://bingblue.qiniudn.com/common/index/item5.png",
+    "img": "https://bingblue.oss-cn-hangzhou.aliyuncs.com/common/index/item5.png",
     "tag": "MOON,H5,小游戏,微信"
   },{
     "id": 6,
@@ -45,7 +45,7 @@
     "title": "明星拜年",
     "intro": "腾讯过年项目-明星拜年-张亮，范冰冰等你哦",
     "url": "https://bingblue.com/works/newyear",
-    "img": "http://bingblue.qiniudn.com/common/index/item6.png",
+    "img": "https://bingblue.oss-cn-hangzhou.aliyuncs.com/common/index/item6.png",
     "tag": "NEWYEAR,H5,微信,营销"
   },{
     "id": 7,
@@ -53,7 +53,7 @@
     "title": "vip小游戏",
     "intro": "vipjr推广活动,内含三款小游戏，纸牌抽奖哦",
     "url": "https://bingblue.com/works/vipjr",
-    "img": "http://bingblue.qiniudn.com/common/index/item7.png",
+    "img": "https://bingblue.oss-cn-hangzhou.aliyuncs.com/common/index/item7.png",
     "tag": "VIPJR,H5,小游戏,微信,抽奖"
   },{
     "id": 8,
@@ -61,7 +61,7 @@
     "title": "vjoy官网",
     "intro": "vjoy人力资源企业官网",
     "url": "http://www.gongziqianbao.com/humanWebsite",
-    "img": "http://bingblue.qiniudn.com/common/index/item8.png",
+    "img": "https://bingblue.oss-cn-hangzhou.aliyuncs.com/common/index/item8.png",
     "tag": "VJOY,PC,网站"
   },{
     "id": 9,
@@ -69,7 +69,7 @@
     "title": "互动墙",
     "intro": "年会、大型活动适用,内含各种各样的互动方式,如签到,留言等",
     "url": "https://bingblue.com/works/wall",
-    "img": "http://bingblue.qiniudn.com/common/index/item9.png",
+    "img": "https://bingblue.oss-cn-hangzhou.aliyuncs.com/common/index/item9.png",
     "tag": "WALL,PC,小游戏,微信,抽奖"
   },
   {
@@ -78,7 +78,7 @@
     "title": "润博电子官网",
     "intro": "上海润博电子系统设备股份有限公司-公司官网",
     "url": "http://www.shanghai-rambo.com.cn/",
-    "img": "http://bingblue.qiniudn.com/common/index/item10.png",
+    "img": "https://bingblue.oss-cn-hangzhou.aliyuncs.com/common/index/item10.png",
     "tag": "RAMBO,PC,网站"
   }]
 }
