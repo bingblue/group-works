@@ -1,5 +1,16 @@
 $(function () {
+  /* 通用 */
+  $.getQueryString = function (name){
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)")
+    var r = window.location.search.substr(1).match(reg)
+    if(r!=null){
+      return decodeURI(r[2])
+    }else{
+      return ''
+    }
+  }
   let Works
+  let query = $.getQueryString('query')
   $.ajax({
     url: './data.json',
     type: 'GET',
@@ -7,7 +18,8 @@ $(function () {
     dataType: 'json',
     success: function (data) {
       Works = data.data
-      createHtml(Works)
+      let newWork = getWorksByTag(query, Works)
+      createHtml(newWork)
     },
     error: function () {
       window.location.reload(true)
@@ -26,11 +38,13 @@ $(function () {
     let tag = $('.go input').val()
     let newWork = getWorksByTag(tag, Works)
     createHtml(newWork)
+    clearTag()
   })
   $('.works').on('click', '.tag span', function(){
     let tag = $(this).text()
     let newWork = getWorksByTag(tag, Works)
     createHtml(newWork)
+    clearTag(true)
     return false
   })
   function getWorksByTag(tag, works) {
@@ -48,6 +62,10 @@ $(function () {
   }
   function createHtml(works) {
     $('.works').html('')
+    if(works.length <= 0) {
+      noData()
+      return
+    }
     for (let i in works) {
       let tags = works[i].tag.split(',')
       let tagsHtml = ''
@@ -63,5 +81,21 @@ $(function () {
                       </li>`
       $(newHtml).appendTo($('.works'))
     }
+  }
+
+  function noData() {
+    let newHtml = `<li class="no-data">
+                    <img src="common/index/no_data.png" alt="暂无搜索内容">
+                    <p>未找到该案例~<br>
+                      但我们可以为您定制开发，请联系<a title="邮箱:business@bingblue.com" href="mailto:business@bingblue.com">我们</a>！</p>
+                  </li>`
+    $(newHtml).appendTo($('.works'))
+  }
+
+  // 重置标签
+  function clearTag(clearIpt) {
+    if(clearIpt) $('.go input').val('')
+    $('.search .active').removeClass('active')
+    $('.search a').eq(0).parent().addClass('active')
   }
 })

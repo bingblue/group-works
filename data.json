@@ -62,7 +62,7 @@
     "intro": "vjoy人力资源企业官网",
     "url": "http://www.gongziqianbao.com/humanWebsite",
     "img": "https://bingblue.oss-cn-hangzhou.aliyuncs.com/common/index/item8.png",
-    "tag": "VJOY,PC,网站"
+    "tag": "VJOY,PC,网站,官网"
   },{
     "id": 9,
     "name": "wall",
@@ -79,6 +79,15 @@
     "intro": "上海润博电子系统设备股份有限公司-公司官网",
     "url": "http://www.shanghai-rambo.com.cn/",
     "img": "https://bingblue.oss-cn-hangzhou.aliyuncs.com/common/index/item10.png",
-    "tag": "RAMBO,PC,网站"
+    "tag": "RAMBO,PC,网站,官网"
+  },
+  {
+    "id": 11,
+    "name": "xbjh",
+    "title": "新百金汉·青年汇",
+    "intro": "嘉定新百金汉·青年汇商业广场-公司官网",
+    "url": "https://www.xbjh-plaza.com",
+    "img": "./common/index/item11.jpg",
+    "tag": "XBJH,PC,网站,官网"
   }]
 }

@@ -130,6 +130,26 @@ ul.works li:nth-child(3n) {
   margin-right: 0%;
 }
 
+ul.works li.no-data {
+  width: 100%;
+}
+ul.works li.no-data img {
+  width: 500px;
+  border: 0;
+}
+ul.works li.no-data p {
+  position: relative;
+  top: -100px;
+  color: #0099ff;
+  line-height: 25px;
+  font-size: 14px;
+}
+ul.works li.no-data p a {
+  font-size: 16px;
+  color: #FCAC45;
+  padding: 0 2px;
+}
+
 ul.works .pos {
   display: none;
   position: absolute;
